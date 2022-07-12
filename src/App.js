@@ -1,13 +1,18 @@
 import Pages from "./pages/Pages";
 import styled from "styled-components";
+import Category from "./components/Category";
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <Header>
-      <h2>Boom Spicy Shop</h2>
-      </Header>
-      <Pages />
+      <BrowserRouter>
+        <Header>
+        <h2>Boom Spicy Shop</h2>
+        </Header>
+        <Category />
+        <Pages />
+      </BrowserRouter>
     </div>
   );
 }
