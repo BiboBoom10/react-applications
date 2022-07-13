@@ -8,12 +8,17 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header>
-        <h2>Boom Spicy Shop</h2>
-        </Header>
-        <Search />
-        <Category />
-        <Pages />
+        <Stuck>
+          <Header>
+          <h2>Boom Spicy Shop</h2>
+          </Header>
+        </Stuck>
+
+        <Content>
+          <Search />
+          <Category />
+          <Pages />
+        </Content>
       </BrowserRouter>
     </div>
   );
@@ -26,6 +31,18 @@ const Header = styled.div`
   color: white;
   height: 3rem;
   background-color: black;
+`;
+
+const Stuck = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+`;
+
+const Content = styled.div`
+  margin-top: 4rem;
 `;
 
 export default App;
