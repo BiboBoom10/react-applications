@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function Searched() {
 
@@ -24,8 +25,10 @@ function Searched() {
         {searchedRecipes.map((item) => {
             return(
                 <Card key={item.id}>
-                    <img src = {item.image} alt = "" />
-                    <h5> {item.title} </h5>
+                    <Link to={"/recipe/" + item.id}>
+                        <img src = {item.image} alt = "" />
+                        <h5> {item.title} </h5>
+                    </Link>
                 </Card>
             );
         })}
@@ -35,7 +38,7 @@ function Searched() {
 
 
 const Grid = styled.div`
-    displat: grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 1rem;
 `;

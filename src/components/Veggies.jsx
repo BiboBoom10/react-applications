@@ -67,6 +67,9 @@ const Card = styled.div`
     position: relative;
     font-size: 0.8rem;
     
+    p {
+        text-decoration: none;
+    }
 
     img{
         height: 12rem;

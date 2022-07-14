@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Category from "./components/Category";
 import { BrowserRouter } from 'react-router-dom';
 import Search from "./components/Search";
+import { Link } from 'react-router-dom';
+import { GiKnifeFork } from 'react-icons/gi';
 
 function App() {
   return (
@@ -10,7 +12,8 @@ function App() {
       <BrowserRouter>
         <Stuck>
           <Header>
-          <h2>Boom Spicy Shop</h2>
+            <GiKnifeFork />
+            <Logo to={"/"}>Boom Spicy Shop</Logo>
           </Header>
         </Stuck>
 
@@ -31,6 +34,10 @@ const Header = styled.div`
   color: white;
   height: 3rem;
   background-color: black;
+
+  svg {
+    font-size: 2rem;
+  }
 `;
 
 const Stuck = styled.div`
@@ -43,6 +50,12 @@ const Stuck = styled.div`
 
 const Content = styled.div`
   margin-top: 4rem;
+`;
+
+const Logo = styled(Link)`
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
 `;
 
 export default App;

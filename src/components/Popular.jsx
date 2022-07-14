@@ -29,8 +29,6 @@ function Popular() {
         console.log(data);
         }
 
-        
-
     }
 
   return (
